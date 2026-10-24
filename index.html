@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yayasan Panti Asuhan Al-Mabrurotul Munawwaroh Al-Amanah</title>
+<meta name="description" content="Donasi untuk Yayasan Panti Asuhan Al-Mabrurotul Munawwaroh Al-Amanah.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Antonio:wght@700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+:root{
+  --cream:#fafbf3;
+  --green:#40725b;
+  --yellow:#f3cc4b;
+  --white:#ffffff;
+  --pad:clamp(20px,5.7vw,58px);
+  --head-h:52px;
+  --f-body:"Helvetica Neue",Helvetica,Arial,"Liberation Sans",sans-serif;
+  --f-klein:"Antonio","Arial Narrow","Liberation Sans Narrow",Impact,sans-serif;
+  --f-anton:"Anton",Impact,"Arial Narrow","Liberation Sans Narrow",sans-serif;
+}
+*{box-sizing:border-box}
+html{overflow-x:clip;scroll-behavior:smooth;scroll-padding-top:var(--head-h);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--green);font-family:var(--f-body);overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,p,ul{margin:0}
+.nb{white-space:nowrap}
+
+/* ---------- sticky header ---------- */
+.site-head{position:sticky;top:0;z-index:50;height:var(--head-h);display:flex;align-items:center;justify-content:space-between;
+  gap:12px;padding:0 var(--pad);background:var(--green);box-shadow:0 2px 10px rgba(0,0,0,.18)}
+.back{font:700 14px/1 var(--f-body);letter-spacing:-.02em;text-decoration:none;color:var(--cream);padding:8px 14px;border-radius:999px;
+  border:2px solid var(--cream);visibility:hidden}
+body.view-donate .back{visibility:visible}
+.lang{display:inline-flex;gap:0;padding:3px;border-radius:999px;background:rgba(0,0,0,.2)}
+.lang button{all:unset;cursor:pointer;font:700 13px/1 var(--f-body);letter-spacing:.04em;color:var(--cream);padding:8px 14px;border-radius:999px;
+  min-width:44px;text-align:center}
+.lang button[aria-pressed="true"]{background:var(--yellow);color:var(--green)}
+.lang button:focus-visible,.back:focus-visible,.btn:focus-visible,a:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+
+/* ---------- views ---------- */
+.view{display:none}
+body.view-home #home{display:block}
+body.view-donate #donate{display:block}
+
+/* ---------- hero ---------- */
+.hero{background:var(--cream);padding:clamp(24px,3.5vw,36px) var(--pad) clamp(28px,4vw,52px);text-align:center}
+.hero h1{font:700 clamp(27px,6.3vw,68px)/1.02 var(--f-klein);text-transform:uppercase;max-width:1000px;margin:0 auto clamp(14px,2vw,22px);letter-spacing:0}
+.hero .photo{width:100%;max-width:908px;margin:0 auto;aspect-ratio:908/294;border-radius:14px;overflow:hidden}
+.hero .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;font:700 clamp(16px,2vw,20px)/1 var(--f-body);letter-spacing:-.04em;
+  min-height:48px;padding:0 clamp(32px,6vw,62px);border-radius:999px;transition:transform .2s ease,box-shadow .2s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(64,114,91,.28)}
+.btn-green{background:var(--green);color:var(--white);margin-top:clamp(20px,3vw,30px)}
+.btn-yellow{background:var(--yellow);color:var(--green);min-height:40px;font-size:clamp(14px,1.5vw,16px);padding:0 clamp(18px,2.4vw,23px)}
+
+/* ---------- who are we ---------- */
+.about{background:var(--green);color:var(--yellow);padding:clamp(32px,6vw,60px) var(--pad) clamp(32px,5vw,60px)}
+.about .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.84fr);gap:clamp(24px,5vw,64px);max-width:1100px;margin:0 auto;align-items:stretch}
+.about .col-text{display:flex;flex-direction:column;justify-content:space-between;gap:28px;align-items:flex-start}
+.tag{display:inline-block;background:var(--yellow);color:var(--green);font:700 clamp(30px,4.7vw,50px)/1.05 var(--f-body);letter-spacing:-.06em;padding:2px 8px 4px}
+.about h2{font:400 clamp(32px,4.8vw,50px)/1 var(--f-body);letter-spacing:-.065em;margin-top:clamp(8px,1.4vw,14px)}
+.about p{font:400 clamp(21px,3vw,32px)/1.1 var(--f-body);letter-spacing:-.06em;margin-top:2px}
+.about p em{text-decoration:underline;font-style:italic}
+.card{background:var(--white);border-radius:clamp(28px,4vw,42px);display:flex;align-items:center;justify-content:center;padding:clamp(18px,3vw,34px);aspect-ratio:402/414;width:100%}
+.card img{width:100%;max-width:340px;height:auto}
+
+/* ---------- vision & mission ---------- */
+.vm{background:var(--yellow);color:var(--green);overflow-x:clip;padding:clamp(0px,.5vw,5px) 0 clamp(40px,7.3vw,75px);--sh:clamp(190px,53.5vw,620px)}
+.row{display:grid;align-items:center}
+.row-vision{grid-template-columns:minmax(0,1fr) auto;column-gap:clamp(14px,4.3vw,44px);padding-left:var(--pad);margin-bottom:clamp(24px,6.7vw,69px)}
+.row-mission{grid-template-columns:auto minmax(0,1fr);column-gap:clamp(12px,2.7vw,28px);padding-right:var(--pad);align-items:start}
+.vision-text{text-align:right;font:300 clamp(21px,3.9vw,41px)/1.05 var(--f-body);letter-spacing:-.065em;justify-self:end;max-width:700px}
+.vision-text b{font-weight:700}
+/* shapes traced from the PDF; the label always stays inside the shape */
+.shape{position:relative;flex:none;height:var(--sh);width:calc(var(--sh) * var(--ratio))}
+.shape svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;filter:drop-shadow(0 4px 7px rgba(0,0,0,.2));pointer-events:none}
+.shape .lbl{position:absolute;top:50%;left:var(--cx);writing-mode:vertical-rl;white-space:nowrap;
+  transform:translate(-50%,-50%) rotate(180deg);color:var(--cream);font-family:var(--f-body);font-weight:400;line-height:1;
+  letter-spacing:-.08em;text-shadow:0 3px 7px rgba(0,0,0,.28);
+  font-size:min(calc(var(--sh) * var(--fs)), calc(var(--sh) * .6 / var(--len)))}
+.shape-visi{--ratio:.512;--cx:71.5%;--fs:.2555;--len:1.57}
+.shape-misi{--ratio:.447;--cx:25.3%;--fs:.243;--len:1.74}
+html[lang="en"] .shape-visi{--len:2.91}
+html[lang="en"] .shape-misi{--len:3.66}
+.mission-list{display:flex;flex-direction:column;gap:2px;max-width:780px}
+.mission-list h3{font:700 clamp(18px,3.1vw,32px)/1.08 var(--f-body);letter-spacing:-.06em;margin-top:clamp(6px,1vw,10px)}
+.mission-list h3:first-child{margin-top:0}
+.mission-list ul{list-style:none;padding:0;margin:0}
+.mission-list li{position:relative;padding-left:clamp(22px,3.4vw,36px);font:300 clamp(17px,3.1vw,32px)/1.08 var(--f-body);letter-spacing:-.06em}
+.mission-list li::before{content:"";position:absolute;left:clamp(6px,1vw,10px);top:.48em;width:.2em;height:.2em;border-radius:50%;background:var(--green)}
+
+/* ---------- funds ---------- */
+.funds{background:var(--white);position:relative;overflow:hidden;text-align:center;padding:clamp(70px,11vw,130px) var(--pad) clamp(40px,6vw,70px)}
+.badge{position:absolute;left:0;top:0;height:var(--bh);width:calc(var(--bh) * .8);--bh:clamp(120px,20.4vw,209px)}
+.badge svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;filter:drop-shadow(0 3px 5px rgba(0,0,0,.18))}
+.badge span{position:absolute;left:47%;top:50%;width:82%;transform:translate(-50%,-50%) rotate(-38deg);text-align:center;
+  color:var(--yellow);font:700 calc(var(--bh) * .075)/1.12 var(--f-body);letter-spacing:.06em}
+.funds h2{font:700 clamp(30px,5.2vw,56px)/1 var(--f-klein);text-transform:uppercase;margin-bottom:clamp(6px,2vw,20px)}
+.big-wrap{width:100%;max-width:1000px;margin:0 auto;overflow:hidden}
+.big{font:400 160px/1.15 var(--f-anton);letter-spacing:0;white-space:nowrap;display:inline-block;color:var(--green);font-variant-numeric:tabular-nums}
+.funds .thanks{font:700 clamp(22px,4.3vw,48px)/1.05 var(--f-klein);text-transform:uppercase;margin-top:clamp(18px,3.5vw,40px)}
+
+/* ---------- address ---------- */
+.address{background:var(--yellow);color:var(--green);padding:clamp(28px,5vw,64px) var(--pad)}
+.address .in{display:flex;align-items:center;gap:clamp(14px,3vw,34px);max-width:1100px;margin:0 auto}
+.address svg{flex:0 0 auto;width:clamp(30px,5.6vw,72px);height:auto}
+.address p{font:400 clamp(20px,3.8vw,40px)/1.05 var(--f-anton);min-width:0;overflow-wrap:anywhere}
+
+/* ---------- footer ---------- */
+.foot{background:var(--green);color:var(--yellow);padding:clamp(28px,5.5vw,58px) var(--pad)}
+.foot .in{display:grid;grid-template-columns:clamp(110px,22vw,228px) minmax(0,1fr);gap:clamp(18px,3vw,30px);align-items:center;max-width:1100px;margin:0 auto}
+.logo-card{background:var(--white);border-radius:clamp(22px,4vw,40px);aspect-ratio:228/235;display:flex;align-items:center;justify-content:center;padding:12%}
+.logo-card img{width:100%;height:auto}
+.foot h2{font:400 clamp(24px,5.4vw,56px)/1.04 var(--f-anton);letter-spacing:0}
+.foot .q{font:400 clamp(15px,2.4vw,27px)/1.1 var(--f-anton);margin-top:clamp(12px,2vw,22px)}
+.icons{display:flex;gap:14px;margin-top:clamp(10px,1.4vw,14px)}
+.icons a{display:inline-flex;width:clamp(30px,4vw,42px);height:clamp(30px,4vw,42px);color:var(--yellow);transition:transform .2s}
+.icons a:hover{transform:scale(1.12)}
+.icons svg{width:100%;height:100%}
+
+/* ---------- donate view ---------- */
+.donate{background:var(--white);text-align:center;padding:clamp(28px,5vw,56px) var(--pad) clamp(40px,6vw,80px);min-height:calc(100vh - var(--head-h))}
+.donate h1{font:700 clamp(26px,5.3vw,58px)/1.05 var(--f-klein);text-transform:uppercase;max-width:1000px;margin:0 auto clamp(22px,4vw,48px)}
+.qr{width:100%;max-width:700px;margin:0 auto;border-radius:clamp(10px,2vw,20px);overflow:hidden;background:var(--white)}
+.qr img{width:100%;height:auto}
+.donate .thanks2{font:700 clamp(26px,5.6vw,66px)/1.05 var(--f-klein);text-transform:uppercase;max-width:900px;margin:clamp(24px,4vw,48px) auto 0}
+
+/* ---------- reveal animations ---------- */
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .85s cubic-bezier(.2,.7,.2,1),transform .85s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.js .reveal.from-left{transform:translateX(-34px)}
+.js .reveal.from-right{transform:translateX(34px)}
+.js .reveal.pop{transform:scale(.88)}
+.js .reveal.is-in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .btn,.icons a{transition:none}
+}
+
+/* ---------- small screens ---------- */
+@media (max-width:720px){
+  .hero .photo{aspect-ratio:16/10}
+  .about .grid{grid-template-columns:1fr}
+  .about .col-text{gap:22px}
+  .card{max-width:420px;aspect-ratio:auto;min-height:0}
+  .foot .in{grid-template-columns:clamp(96px,28vw,150px) minmax(0,1fr)}
+}
+@media (max-width:900px){
+  .funds{padding-top:calc(var(--bh,150px) + 14px)}
+  .funds{--bh:clamp(120px,20.4vw,209px)}
+}
+</style>
+</head>
+<body class="view-home">
+
+<header class="site-head">
+  <a class="back" href="#" data-i18n="back">← Kembali</a>
+  <div class="lang" role="group" aria-label="Language / Bahasa">
+    <button type="button" data-lang="id" aria-pressed="true">ID</button>
+    <button type="button" data-lang="en" aria-pressed="false">EN</button>
+  </div>
+</header>
+
+<!-- ================= HOME ================= -->
+<main id="home" class="view">
+
+  <section class="hero">
+    <h1 class="reveal">Yayasan Panti Asuhan <span class="nb">Al-Mabrurotul</span> Munawwaroh <span class="nb">Al-Amanah</span></h1>
+    <div class="photo reveal" style="--d:.1s"><img src="assets/photo.jpg" alt="Rumah Harapan – Panti Asuhan Al Mabrurotul, Buaran Indah, Tangerang" width="1400" height="668"></div>
+    <a class="btn btn-green reveal" style="--d:.2s" href="#donate" data-i18n="donate">Donasi →</a>
+  </section>
+
+  <section class="about" id="about">
+    <div class="grid">
+      <div class="col-text">
+        <div>
+          <span class="tag reveal from-left" data-i18n="who">Siapa kami?</span>
+          <h2 class="reveal from-left" style="--d:.12s" data-i18n="weare">Kami adalah...</h2>
+          <p class="reveal from-left" style="--d:.24s" data-i18n-html="aboutp">Sebuah <em>community service group</em> yang berisikan delapan orang, ya, DELAPAN ORANG!</p>
+        </div>
+        <a class="btn btn-yellow reveal from-left" style="--d:.36s" href="https://www.instagram.com/upin2ipin_?srtk=d3JuMXpnMGc5NjFp" target="_blank" rel="noopener noreferrer">Instagram →</a>
+      </div>
+      <div class="card reveal from-right" style="--d:.2s"><img src="assets/cartoon.png" alt="Ilustrasi dua anggota community service group" width="484" height="465"></div>
+    </div>
+  </section>
+
+  <section class="vm" id="vm">
+    <div class="row row-vision">
+      <p class="vision-text reveal from-left" data-i18n-html="vision">Menjadi jembatan kepedulian yang menghadirkan hunian aman, layak, dan penuh kasih bagi bayi serta anak-anak di <b>Yayasan Panti Asuhan <span class="nb">Al-Mabrurotul</span> Munawwaroh <span class="nb">Al-Amanah</span></b>, sekaligus mengapresiasi dedikasi mulia para pengurusnya.</p>
+      <div class="shape shape-visi reveal pop" style="--d:.15s">
+        <svg viewBox="0 0 280.7 548.3" aria-hidden="true"><path fill="#40725b" d="M235.0,0.0L230.7,0.3L225.0,5.0L194.3,70.0L190.0,75.0L185.3,77.7L176.7,78.7L106.3,59.7L99.0,61.3L96.3,64.0L94.7,69.0L100.7,141.0L97.7,151.0L94.0,155.0L87.3,158.3L19.3,176.3L15.0,179.3L13.0,183.3L13.0,188.0L14.7,191.7L55.3,250.3L57.3,256.0L57.3,261.3L54.0,269.0L2.0,321.0L0.0,329.0L1.7,333.0L5.0,336.0L70.0,366.7L75.0,371.0L77.7,375.7L78.3,385.7L59.7,454.3L60.3,460.3L64.0,464.7L67.0,466.0L140.0,460.3L145.0,460.7L152.0,464.0L158.0,472.7L176.3,542.0L179.3,546.0L183.7,548.0L191.0,546.7L245.7,508.7L254.3,504.0L261.7,503.7L267.0,505.7L280.3,517.7L280.3,41.7L240.7,2.7Z"/></svg>
+        <span class="lbl" data-i18n="visi">VISI</span>
+      </div>
+    </div>
+
+    <div class="row row-mission">
+      <div class="shape shape-misi reveal pop">
+        <svg viewBox="0 0 245.0 548.3" aria-hidden="true"><path fill="#40725b" d="M61.0,0.0L53.0,1.7L0.0,38.0L0.0,542.0L9.3,548.0L14.7,547.3L19.0,544.0L50.7,477.3L58.3,470.7L63.0,469.3L69.3,469.7L138.0,488.3L145.7,486.7L149.7,480.7L144.0,408.7L144.7,401.7L147.3,396.3L151.0,392.7L157.3,389.7L225.3,371.7L229.3,369.0L231.7,364.0L230.3,357.0L190.0,299.0L187.0,289.3L188.0,283.7L192.0,277.3L242.0,227.7L244.3,223.3L244.3,218.0L240.0,212.3L174.0,181.0L167.0,172.7L166.0,163.3L184.7,94.7L184.3,88.0L181.0,83.7L177.3,82.0L104.7,87.7L98.3,87.0L93.0,84.3L86.7,75.7L68.3,6.3L64.7,1.7Z"/></svg>
+        <span class="lbl" data-i18n="misi">MISI</span>
+      </div>
+      <div class="mission-list">
+        <h3 class="reveal" data-i18n="m1h">Penggalangan Dana &amp; Dukungan Sosial</h3>
+        <ul class="reveal"><li data-i18n="m1p">Menggalang kepedulian dan donasi publik secara transparan guna mendukung operasional serta pemenuhan sarana dan prasarana panti.</li></ul>
+        <h3 class="reveal" style="--d:.08s" data-i18n="m2h">Pemenuhan Kebutuhan Spesifik Bayi &amp; Anak</h3>
+        <ul class="reveal" style="--d:.08s"><li data-i18n="m2p">Menyediakan makanan bergizi serta melengkapi kebutuhan pokok harian. Khususnya nutrisi, perlengkapan, dan perawatan harian untuk bayi dan anak-anak.</li></ul>
+        <h3 class="reveal" style="--d:.16s" data-i18n="m3h">Peningkatan Keamanan &amp; Keharmonisan Lingkungan</h3>
+        <ul class="reveal" style="--d:.16s"><li data-i18n="m3p">Melakukan renovasi fasilitas fisik, seperti perbaikan pintu dan sarana kelayakan bangunan, demi menghadirkan ruang tinggal yang aman dan nyaman.</li></ul>
+        <h3 class="reveal" style="--d:.24s" data-i18n="m4h">Apresiasi Dedikasi Pengurus</h3>
+        <ul class="reveal" style="--d:.24s"><li data-i18n="m4p">Memberikan dukungan moral dan apresiasi khusus kepada para pengurus atas jasa, kesabaran, serta keikhlasan mereka dalam merawat anak-anak setiap hari.</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="funds" id="funds">
+    <div class="badge reveal pop">
+      <svg viewBox="0 0 167.3 208.7" aria-hidden="true"><path fill="#40725b" d="M144.3,0.3L0.0,0.0L0.0,196.0L15.7,208.0L18.3,207.3L38.0,192.0L63.0,201.0L78.7,178.7L105.3,179.3L113.0,153.7L138.3,146.3L137.7,119.7L159.7,104.3L151.0,78.7L167.0,58.3L151.0,36.7L159.7,11.0Z"/></svg>
+      <span data-i18n="badge">Jumlah donasi diperbarui setiap minggu!</span>
+    </div>
+    <h2 class="reveal" data-i18n="raised">Dana terkumpul</h2>
+    <div class="big-wrap reveal" style="--d:.1s">
+      <div class="big" id="total" aria-live="off" aria-label="Rp 651,000.00">Rp 0.00</div>
+    </div>
+    <p class="thanks reveal" style="--d:.2s" data-i18n="thanks">Terima kasih telah berkontribusi!</p>
+  </section>
+
+  <section class="address">
+    <div class="in reveal">
+      <svg viewBox="0 0 72 100" aria-hidden="true"><path fill="#40725b" d="M36 0C16.100 0 0 16.100 0 36c0 25.500 31.200 59.700 34.100 62.800a2.800 2.800 0 0 0 3.800 0C40.800 95.700 72 61.500 72 36 72 16.100 55.900 0 36 0z"/><circle cx="36" cy="35" r="14" fill="#f3cc4b"/></svg>
+      <p>Jl. Jambu No.30, RT.006/RW.005, Buaran Indah, Kec. Cipondoh, Kota Tangerang, Banten 15119</p>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="in">
+      <div class="logo-card reveal pop"><img src="assets/logo.png" alt="Logo PAHOA's community service group 2" width="387" height="371"></div>
+      <div class="reveal" style="--d:.1s">
+        <h2>PAHOA's community service group 2, class 12.5</h2>
+        <p class="q" data-i18n="contact">Ada pertanyaan? Contact us!</p>
+        <div class="icons">
+          <a href="https://www.instagram.com/upin2ipin_?srtk=d3JuMXpnMGc5NjFp" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="40" height="40" rx="11"/><circle cx="24" cy="24" r="9.500"/><circle cx="35.500" cy="12.500" r="1.800" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://wa.me/628111055535" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp +62 811-1055-535">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.500 43.500l3.100-10.900A19.500 19.500 0 1 1 15.600 40.500z"/><path d="M17 14.500c-1.300.7-2.300 2.200-2 4.300.6 4.400 5.600 10.500 11.200 12.300 2.100.7 3.800-.1 4.600-1.700.3-.7.200-1.100-.4-1.500l-3-1.700c-.6-.3-1.100-.2-1.500.3l-1.100 1.300c-3-1-5.500-3.600-6.500-6.200l1.200-1.200c.4-.4.500-.9.200-1.500l-1.500-3c-.3-.5-.8-.6-1.400-.4z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</main>
+
+<!-- ================= DONATE (QRIS) ================= -->
+<main id="donate" class="view donate">
+  <h1 data-i18n-html="dtitle">Donasi kepada Yayasan Panti Asuhan <span class="nb">Al-Mabrurotul</span> Munawwaroh <span class="nb">Al-Amanah</span></h1>
+  <div class="qr"><img src="assets/qris.jpg" alt="QRIS – Darren Whisnu Wardhana, M. NMID ID1026573515636" width="955" height="1114"></div>
+  <p class="thanks2" data-i18n="dthanks">Berapa pun nominalnya, terima kasih banyak ya!</p>
+</main>
+
+<script>
+(function(){
+  /* ===== ganti angka ini setiap minggu / update this number every week ===== */
+  var TOTAL_DONATIONS = 651000;
+
+  var T = {
+    id:{
+      back:'← Kembali', donate:'Donasi →', who:'Siapa kami?', weare:'Kami adalah...',
+      aboutp:'Sebuah <em>community service group</em> yang berisikan delapan orang, ya, DELAPAN ORANG!',
+      visi:'VISI',
+      vision:'Menjadi jembatan kepedulian yang menghadirkan hunian aman, layak, dan penuh kasih bagi bayi serta anak-anak di <b>Yayasan Panti Asuhan <span class="nb">Al-Mabrurotul</span> Munawwaroh <span class="nb">Al-Amanah</span></b>, sekaligus mengapresiasi dedikasi mulia para pengurusnya.',
+      misi:'MISI',
+      m1h:'Penggalangan Dana & Dukungan Sosial',
+      m1p:'Menggalang kepedulian dan donasi publik secara transparan guna mendukung operasional serta pemenuhan sarana dan prasarana panti.',
+      m2h:'Pemenuhan Kebutuhan Spesifik Bayi & Anak',
+      m2p:'Menyediakan makanan bergizi serta melengkapi kebutuhan pokok harian. Khususnya nutrisi, perlengkapan, dan perawatan harian untuk bayi dan anak-anak.',
+      m3h:'Peningkatan Keamanan & Keharmonisan Lingkungan',
+      m3p:'Melakukan renovasi fasilitas fisik, seperti perbaikan pintu dan sarana kelayakan bangunan, demi menghadirkan ruang tinggal yang aman dan nyaman.',
+      m4h:'Apresiasi Dedikasi Pengurus',
+      m4p:'Memberikan dukungan moral dan apresiasi khusus kepada para pengurus atas jasa, kesabaran, serta keikhlasan mereka dalam merawat anak-anak setiap hari.',
+      badge:'Jumlah donasi diperbarui setiap minggu!', raised:'Dana terkumpul', thanks:'Terima kasih telah berkontribusi!',
+      contact:'Ada pertanyaan? Contact us!',
+      dtitle:'Donasi kepada Yayasan Panti Asuhan <span class="nb">Al-Mabrurotul</span> Munawwaroh <span class="nb">Al-Amanah</span>',
+      dthanks:'Berapa pun nominalnya, terima kasih banyak ya!'
+    },
+    en:{
+      back:'← Back', donate:'Donate →', who:'Who are we?', weare:'We are...',
+      aboutp:'A <em>community service group</em> made up of eight people. Yes, EIGHT PEOPLE!',
+      visi:'VISION',
+      vision:'To be a bridge of care that provides a safe, decent and loving home for the babies and children of <b>Yayasan Panti Asuhan <span class="nb">Al-Mabrurotul</span> Munawwaroh <span class="nb">Al-Amanah</span></b>, while also honoring the noble dedication of its caregivers.',
+      misi:'MISSION',
+      m1h:'Fundraising & Social Support',
+      m1p:'Raising public care and donations transparently to support operations and to meet the orphanage’s facility and infrastructure needs.',
+      m2h:'Meeting the Specific Needs of Babies & Children',
+      m2p:'Providing nutritious food and completing daily essentials, especially nutrition, supplies, and daily care for babies and children.',
+      m3h:'Improving Safety & Harmony of the Environment',
+      m3p:'Renovating physical facilities, such as repairing doors and making the building fit for living, to provide a safe and comfortable home.',
+      m4h:'Appreciating the Caregivers’ Dedication',
+      m4p:'Giving moral support and special appreciation to the caregivers for their service, patience, and sincerity in caring for the children every day.',
+      badge:'Total donations updated every week!', raised:'Funds raised', thanks:'Thank you for contributing!',
+      contact:'Got questions? Contact us!',
+      dtitle:'Donate to Yayasan Panti Asuhan <span class="nb">Al-Mabrurotul</span> Munawwaroh <span class="nb">Al-Amanah</span>',
+      dthanks:'No matter the amount, thank you so much!'
+    }
+  };
+
+  var body=document.body, lang='id';
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function setLang(l){
+    lang=l; var d=T[l];
+    document.documentElement.lang=l;
+    document.querySelectorAll('[data-i18n]').forEach(function(el){ el.textContent=d[el.getAttribute('data-i18n')]; });
+    document.querySelectorAll('[data-i18n-html]').forEach(function(el){ el.innerHTML=d[el.getAttribute('data-i18n-html')]; });
+    document.querySelectorAll('.lang button').forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.lang===l)); });
+    try{ localStorage.setItem('lang',l); }catch(e){}
+    fitTotal();
+  }
+  document.querySelectorAll('.lang button').forEach(function(b){ b.addEventListener('click',function(){ setLang(b.dataset.lang); }); });
+
+  /* ---- fit the big number to its box ---- */
+  var totalEl=document.getElementById('total');
+  function fitTotal(){
+    if(!totalEl) return;
+    var wrap=totalEl.parentElement, max=Math.min(wrap.clientWidth,1000);
+    if(!max) return;
+    totalEl.style.fontSize='160px';
+    // measure the widest possible text (final value) regardless of animation progress
+    var cur=totalEl.textContent; totalEl.textContent=fmt(TOTAL_DONATIONS);
+    var w=totalEl.getBoundingClientRect().width;
+    totalEl.textContent=cur;
+    if(w>0) totalEl.style.fontSize=Math.max(28,Math.min(220,160*(max-4)/w))+'px';
+  }
+  function fmt(n){ return 'Rp '+n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+
+  /* ---- count-up ---- */
+  var counted=false, raf=0;
+  function countUp(){
+    if(counted) return; counted=true;
+    if(reduce){ totalEl.textContent=fmt(TOTAL_DONATIONS); return; }
+    var start=null, dur=2400;
+    function step(ts){
+      if(start===null) start=ts;
+      var t=Math.min(1,(ts-start)/dur), e=1-Math.pow(1-t,3);
+      totalEl.textContent=fmt(Math.round(TOTAL_DONATIONS*e));
+      if(t<1) raf=requestAnimationFrame(step);
+    }
+    raf=requestAnimationFrame(step);
+  }
+
+  /* ---- reveal on scroll ---- */
+  var io=null;
+  function observe(){
+    var els=document.querySelectorAll('.reveal:not(.is-in)');
+    if(!('IntersectionObserver' in window)){ els.forEach(function(e){e.classList.add('is-in');}); countUp(); return; }
+    if(io) io.disconnect();
+    io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          en.target.classList.add('is-in'); io.unobserve(en.target);
+          if(en.target.classList.contains('big-wrap')) countUp();
+        }
+      });
+    },{threshold:.18, rootMargin:'0px 0px -6% 0px'});
+    document.querySelectorAll('.reveal:not(.is-in)').forEach(function(e){ io.observe(e); });
+  }
+
+  /* ---- routing: #donate shows the QRIS page ---- */
+  function route(){
+    var donate=location.hash==='#donate';
+    body.classList.toggle('view-donate',donate);
+    body.classList.toggle('view-home',!donate);
+    if(donate){ window.scrollTo(0,0); }
+    else if(location.hash && document.querySelector(location.hash)){ document.querySelector(location.hash).scrollIntoView(); }
+    requestAnimationFrame(function(){ fitTotal(); observe(); });
+  }
+  document.querySelector('.back').addEventListener('click',function(e){
+    e.preventDefault();
+    history.pushState('',document.title,location.pathname+location.search);
+    route(); window.scrollTo(0,0);
+  });
+  window.addEventListener('hashchange',route);
+  window.addEventListener('resize',fitTotal);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fitTotal);
+
+  var saved=null; try{ saved=localStorage.getItem('lang'); }catch(e){}
+  setLang(saved==='en'?'en':'id');
+  route();
+})();
+</script>
+</body>
+</html>
